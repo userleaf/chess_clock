@@ -1,11 +1,4 @@
-//   
-//  Chess Clock Practice Sketches
-//
-//  Bob Nolan
-//  3/26/2015
-//
-
-// Include LCD display library and set up pinouts
+// Special Thanks to Bob Nolan
 byte customChar1[8] = { //character between the remaining times of players on display
   B00001,
   B00001,
@@ -40,7 +33,7 @@ byte customChar3[8] = { //character that is shown on set time screen
 LiquidCrystal lcd(12,11,5,4,3,2);
 
 // Declare Global Variables
-
+// A fun way to begin chess game by simply pluging a buzzer to listen to EU March
 int C=262;
 int D=294;
 int E=330;
@@ -79,7 +72,7 @@ void setup() {
   lcd.createChar(3,customChar3);  //character to show which value the user is setting
 }
 void loop() {  
-  if (position<5){set();} //to understand position please reed the comments on set() function
+  if (position<5){set();} //to understand position please read the comments on set() function
   
   if (position>4)
   {
@@ -347,7 +340,7 @@ delay(10);
     noTone(10);
 }
 void set_cursor()
-{//cursor to see which value you are setting
+{//cursor to see which value you are setting while setting up the time and increment
     int millis_set_last;
     if(position==0)
     {
